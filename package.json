@@ -1,0 +1,24 @@
+{
+  "name": "sw-send",
+  "version": "0.0.0",
+  "description": "Simple, dependency-free send middleware",
+  "main": "send.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/download13/sw-send.git"
+  },
+  "keywords": [
+    "middleware",
+    "send",
+    "tiny"
+  ],
+  "author": "Erin Dachtler <download333@gmail.com>",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/download13/sw-send/issues"
+  },
+  "homepage": "https://github.com/download13/sw-send"
+}
