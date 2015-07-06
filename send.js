@@ -20,14 +20,14 @@ function send(body, opts) {
 	type = type || 'text/html';
 
 	// MIME type is text, might need encoding parameter
-	if(type.indexOf('text/') === 0) {
-		if(charset !== false) {
+	if(charset !== false) {
+		if(typeof charset !== 'string') {
 			charset = 'utf-8';
 		}
+	}
 
-		if(charset) {
-			type += '; charset=' + charset;
-		}
+	if(charset && type.indexOf('text/') === 0) {
+		type += '; charset=' + charset;
 	}
 
 	var length = (body instanceof Buffer) ? body.length : Buffer.byteLength(body);
@@ -38,5 +38,6 @@ function send(body, opts) {
 
 module.exports = function(req, res, next) {
 	res.send = send;
+
 	next();
 }
