@@ -34,9 +34,7 @@ describe('res.send()', function() {
 			res.send('test');
 		});
 
-		request(stack).get('/').expect(200, 'testd', function(){
-			done();
-		});
+		request(stack).get('/').expect(200, 'test', done);
 	});
 
 	it('defaults to text/html content type with utf-8 encoding', function(done) {
