@@ -4,7 +4,13 @@
   "description": "Simple, dependency-free send middleware",
   "main": "send.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "coverage": "mocha -r blanket -R html-cov > coverage.html"
+  },
+  "config": {
+    "blanket": {
+      "data-cover-only": "send.js"
+    }
   },
   "repository": {
     "type": "git",
@@ -23,7 +29,9 @@
   "homepage": "https://github.com/download13/sw-send",
   "dependencies": {},
   "devDependencies": {
+    "blanket": "^1.1.7",
     "http-router-fn": "0.0.1",
+    "mocha": "^2.2.5",
     "mw-compose": "0.0.0"
   }
 }
