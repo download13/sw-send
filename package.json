@@ -9,7 +9,8 @@
   },
   "config": {
     "blanket": {
-      "data-cover-only": "send.js"
+      "data-cover-only": "send.js",
+      "data-cover-never": "node_modules"
     }
   },
   "repository": {
